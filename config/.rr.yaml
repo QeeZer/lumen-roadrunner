@@ -1,5 +1,5 @@
 server:
-  command: "php ./bin/psr-worker.php"
+  command: "php artisan rr:serve"
 
 http:
   address: 0.0.0.0:8080
