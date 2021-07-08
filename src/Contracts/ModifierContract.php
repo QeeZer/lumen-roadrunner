@@ -10,7 +10,9 @@ use Psr\Http\Message\ServerRequestInterface;
 
 interface ModifierContract
 {
-	public function beforeRequest(Container $app, ServerRequestInterface $request): void;
+    public function init(Container $app): void;
+
+	public function beforeRequest(Container $app, ServerRequestInterface $request): ServerRequestInterface;
 
 	public function afterRequest(Container $app, ServerRequestInterface $request, ResponseInterface $response): void;
 }
