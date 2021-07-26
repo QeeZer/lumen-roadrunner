@@ -18,7 +18,7 @@ class RoadRunnerCommand extends Command
 	protected $signature = 'rr:serve';
 
     /**
-     * serve
+     * serve command handle
      */
 	public function handle(): void
     {

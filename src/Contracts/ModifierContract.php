@@ -5,14 +5,31 @@ namespace QeeZer\LumenRoadRunner\Contracts;
 
 
 use Illuminate\Contracts\Container\Container;
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 interface ModifierContract
 {
+    /**
+     * worker init
+     * @param Container $app
+     */
     public function init(Container $app): void;
 
-	public function beforeRequest(Container $app, ServerRequestInterface $request): ServerRequestInterface;
+    /**
+     * before request callback
+     * @param Container $app
+     * @param Request $request
+     * @return Request
+     */
+	public function beforeRequest(Container $app, Request $request): Request;
 
-	public function afterRequest(Container $app, ServerRequestInterface $request, ResponseInterface $response): void;
+    /**
+     * before response callback
+     * @param Container $app
+     * @param Request $request
+     * @param Response $response
+     * @return Response
+     */
+	public function afterRequest(Container $app, Request $request, Response $response): Response;
 }
