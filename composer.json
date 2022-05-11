@@ -12,7 +12,7 @@
     "minimum-stability": "stable",
     "require": {
         "php": ">=7.2.0",
-        "laravel/lumen-framework": "~6.0",
+        "laravel/lumen-framework": "~6.0 || ~7.0 || ~8.0",
         "nyholm/psr7": "^1.4",
         "symfony/psr-http-message-bridge": "^2.1",
         "spiral/roadrunner": "^2.3",
